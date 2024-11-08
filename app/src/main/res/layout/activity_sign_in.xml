@@ -68,6 +68,15 @@
             android:textColor="@color/primary_text"
             android:textSize="18sp"/>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true">
+
+
+
+
 
         <com.google.android.material.button.MaterialButton
 
@@ -80,6 +89,16 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:cornerRadius="8sp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+
+
+        </FrameLayout>
 
 
         <TextView

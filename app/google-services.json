@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "345238287309",
+    "project_id": "signinsignup-cs460",
+    "storage_bucket": "signinsignup-cs460.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345238287309:android:1ab1e5e3717fd6cf598a84",
+        "android_client_info": {
+          "package_name": "com.example.signinsignoutcs460"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM864cVrukG4fevcjdUMDjpb-DBYcdaVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
