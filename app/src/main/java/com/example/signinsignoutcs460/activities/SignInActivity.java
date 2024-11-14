@@ -40,23 +40,23 @@ public class SignInActivity extends AppCompatActivity {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
 
-        binding.buttonSignIn.setOnClickListener(v -> addDataToFireStore());
+      //  binding.buttonSignIn.setOnClickListener(v -> addDataToFireStore());
     }
 
-    // Test Case
-    private void addDataToFireStore() {
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        HashMap<String, String> data = new HashMap<>();
-
-        data.put("first_name", "Steve");
-        data.put("last_name", "Summers");
-
-        database.collection("Users").add(data).addOnSuccessListener(
-                documentReference -> {
-                    Toast.makeText(getApplicationContext(), "Data Inserted", Toast.LENGTH_SHORT).show();
-                }).addOnFailureListener(exception ->{
-                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
-        });
-
-    }
+//    // Test Case
+//    private void addDataToFireStore() {
+//        FirebaseFirestore database = FirebaseFirestore.getInstance();
+//        HashMap<String, String> data = new HashMap<>();
+//
+//        data.put("first_name", "Steve");
+//        data.put("last_name", "Summers");
+//
+//        database.collection("Users").add(data).addOnSuccessListener(
+//                documentReference -> {
+//                    Toast.makeText(getApplicationContext(), "Data Inserted", Toast.LENGTH_SHORT).show();
+//                }).addOnFailureListener(exception ->{
+//                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
+//        });
+//
+//    }
 }
