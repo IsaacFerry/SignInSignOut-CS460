@@ -38,11 +38,14 @@ public class MainActivity extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
         loadUserDetails();
         getToken();
+        setListeners();
 
     }
 
     private void setListeners(){
         binding.imagesSignOut.setOnClickListener(v -> signOut());
+
+        binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), userActivity.class)));
     }
 
     private void loadUserDetails(){
