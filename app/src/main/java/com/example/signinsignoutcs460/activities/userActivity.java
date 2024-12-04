@@ -1,28 +1,25 @@
 package com.example.signinsignoutcs460.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.example.signinsignoutcs460.R;
 import com.example.signinsignoutcs460.adapters.UsersAdapter;
 import com.example.signinsignoutcs460.databinding.ActivityUserBinding;
+import com.example.signinsignoutcs460.listeners.UserListener;
 import com.example.signinsignoutcs460.models.User;
 import com.example.signinsignoutcs460.utilities.Constants;
 import com.example.signinsignoutcs460.utilities.PreferenceManager;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class userActivity extends AppCompatActivity {
+public class userActivity extends AppCompatActivity implements UserListener {
 
     private ActivityUserBinding binding;
     private PreferenceManager preferenceManager;
@@ -60,7 +57,7 @@ public class userActivity extends AppCompatActivity {
                             users.add(user);
                         }
                         if (users.size() > 0){
-                            UsersAdapter usersAdapter = new UsersAdapter(users);
+                            UsersAdapter usersAdapter = new UsersAdapter(users, this);
                             binding.usersRecyclerView.setAdapter(usersAdapter);
                             binding.usersRecyclerView.setVisibility(View.VISIBLE);
                         } else {
@@ -93,6 +90,22 @@ public class userActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onUserClicked(User user) {
+        // to - do later
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER,user);
+        startActivity(intent);
+        finish();
 
-
+    }
 }
+
+
+
+
+
+
+
+
+
