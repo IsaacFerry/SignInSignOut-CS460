@@ -22,6 +22,8 @@
         android:id="@+id/textMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:paddingStart="12dp"
         android:paddingTop="8dp"
         android:paddingEnd="8dp"
